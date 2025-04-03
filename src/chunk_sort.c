@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chuck_sort.c                                       :+:      :+:    :+:   */
+/*   chunk_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 17:24:50 by brturcio          #+#    #+#             */
-/*   Updated: 2025/04/02 17:51:21 by brturcio         ###   ########.fr       */
+/*   Created: 2025/04/03 10:40:29 by brturcio          #+#    #+#             */
+/*   Updated: 2025/04/03 10:43:16 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void chunk_to_b(t_stack **a_stack, t_stack **b_stack, int chunk_size)
 		}
 }
 
-t_stack *find_max(t_stack *stack)
+t_stack	*find_max(t_stack *stack)
 {
 	if (!stack) // ← Evita segfault si `stack` está vacío
 		return NULL;
@@ -46,9 +46,11 @@ t_stack *find_max(t_stack *stack)
 	while (stack)
 	{
 		if (stack->index > max_node->index)
+		{
 			max_node = stack;
 			stack = stack->next;
 		}
+	}
 	return max_node;
 }
 
@@ -106,10 +108,6 @@ void assign_index(t_stack *stack)
 }
 // resto de funciones...
 
-
-
-
-
 void chunk_sort(t_stack **a_stack, t_stack **b_stack)
 {
 	int len = size_stack(*a_stack);
@@ -122,7 +120,8 @@ void chunk_sort(t_stack **a_stack, t_stack **b_stack)
 	else
 		chunk_size = len / 8;  // 8 chunks para +500 números
 
-	if (!*a_stack) return; // ← Evita fallos si `a_stack` está vacío
+	if (!*a_stack)
+		return; // ← Evita fallos si `a_stack` está vacío
 
 	chunk_to_b(a_stack, b_stack, chunk_size);
 	move_chunks_to_a(a_stack, b_stack);

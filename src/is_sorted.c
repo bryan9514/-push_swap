@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 14:11:49 by brturcio          #+#    #+#             */
-/*   Updated: 2025/03/13 12:10:00 by brturcio         ###   ########.fr       */
+/*   Updated: 2025/04/03 10:42:37 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	choose_sorting_algo(t_stack **a_stack, t_stack **b_stack)
 		else
 		{
 			assign_index(*a_stack);
-			turk_sort(a_stack, b_stack);
+			chunk_sort(a_stack, b_stack);
 		}
 	}
 }
