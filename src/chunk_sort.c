@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 10:40:29 by brturcio          #+#    #+#             */
-/*   Updated: 2025/04/03 10:43:16 by brturcio         ###   ########.fr       */
+/*   Updated: 2025/04/03 12:55:41 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,9 @@ t_stack	*find_max(t_stack *stack)
 	while (stack)
 	{
 		if (stack->index > max_node->index)
-		{
 			max_node = stack;
-			stack = stack->next;
-		}
+		stack = stack->next;
+
 	}
 	return max_node;
 }
