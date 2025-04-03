@@ -6,11 +6,9 @@
 #    By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/17 14:21:58 by brturcio          #+#    #+#              #
-#    Updated: 2025/04/03 12:21:48 by brturcio         ###   ########.fr        #
+#    Updated: 2025/04/03 13:51:08 by brturcio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-
 
 NAME        = push_swap
 CC          = cc
@@ -35,7 +33,7 @@ all: $(LIBFT) $(PRINTF) $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT) $(PRINTF)
 	@$(CC) $(CFLAGS) $(CPPFLAGS) -o $(NAME) $(OBJ) $(LDFLAGS) $(LDLIBS)
-	@echo "✅ Compilation completed: $(NAME)"
+	@echo "✅ Compilation completed: $(NAME) "
 
 $(LIBFT):
 	@$(MAKE) -s -C $(LIBFT_DIR)
@@ -53,13 +51,13 @@ clean:
 	@$(RM) -r $(OBJ_DIR)
 	@$(MAKE) -s -C $(LIBFT_DIR) clean
 	@$(MAKE) -s -C $(PRINTF_DIR) clean
-	@echo "clean done."
+	@echo "✅ clean done. "
 
 fclean: clean
 	@$(RM) $(NAME)
 	@$(MAKE) -s -C $(LIBFT_DIR) fclean
 	@$(MAKE) -s -C $(PRINTF_DIR) fclean
-	@echo "fclean done."
+	@echo "✅ fclean done. "
 
 .PHONY : all clean fclean re debug
 

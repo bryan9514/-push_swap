@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 21:45:06 by brturcio          #+#    #+#             */
-/*   Updated: 2025/03/11 17:33:53 by brturcio         ###   ########.fr       */
+/*   Updated: 2025/04/03 14:17:18 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	free_stack(t_stack **stack)
 		*stack = tmp;
 	}
 }
+
 void	free_stack_error(t_stack **stack)
 {
 	t_stack	*tmp;

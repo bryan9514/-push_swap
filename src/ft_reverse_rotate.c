@@ -6,10 +6,9 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 21:54:00 by brturcio          #+#    #+#             */
-/*   Updated: 2025/03/06 17:15:11 by brturcio         ###   ########.fr       */
+/*   Updated: 2025/04/03 14:18:08 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -23,7 +22,6 @@ void	ft_reverse_rotate(t_stack **stack)
 	penul = *stack;
 	while (penul->next->next != NULL)
 		penul = penul->next;
-
 	last = penul->next;
 	penul->next = NULL;
 	last->next = *stack;

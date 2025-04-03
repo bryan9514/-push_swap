@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 12:33:42 by brturcio          #+#    #+#             */
-/*   Updated: 2025/02/18 17:54:49 by brturcio         ###   ########.fr       */
+/*   Updated: 2025/04/03 14:39:22 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 long	ft_atol(char *str)
 {
-	int	i;
-	int	sgn;
 	long	num;
-
+	int		i;
+	int		sgn;
 
 	i = 0;
 	sgn = 1;

@@ -6,7 +6,7 @@
 /*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 20:41:35 by brturcio          #+#    #+#             */
-/*   Updated: 2025/03/13 13:04:00 by brturcio         ###   ########.fr       */
+/*   Updated: 2025/04/03 14:40:21 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	check_duplicate(char **args, char *num, int index)
 {
-	int	i;
+	int		i;
 	long	number;
 
 	i = 0;
@@ -23,7 +23,6 @@ int	check_duplicate(char **args, char *num, int index)
 	{
 		if (ft_atol(args[i]) == number)
 			return (0);
-
 		i++;
 	}
 	return (1);
@@ -36,9 +35,10 @@ int	is_number(char *args)
 	i = 0;
 	if (!args || !args[0])
 		return (0);
-	if ((args[i] == '-' || args[i] == '+') && (args[i + 1] >= '0' && args[i + 1] <= '9'))
+	if ((args[i] == '-' || args[i] == '+') && \
+		(args[i + 1] >= '0' && args[i + 1] <= '9'))
 		i++;
-	else if (args[i] == '-' || args[i] == '+') //  Caso como "++4" o "--5"
+	else if (args[i] == '-' || args[i] == '+')
 		return (0);
 	while (args[i])
 	{
@@ -51,7 +51,7 @@ int	is_number(char *args)
 
 int	validate_args(char **args)
 {
-	int	i;
+	int		i;
 	long	num;
 
 	i = 0;
@@ -68,7 +68,3 @@ int	validate_args(char **args)
 	}
 	return (1);
 }
-
-
-
-
