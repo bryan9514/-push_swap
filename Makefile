@@ -3,31 +3,31 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+         #
+#    By: brturcio <brturcio@student.42angouleme.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/17 14:21:58 by brturcio          #+#    #+#              #
-#    Updated: 2025/04/03 13:51:08 by brturcio         ###   ########.fr        #
+#    Updated: 2025/04/04 21:40:12 by brturcio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = push_swap
-CC          = cc
-CFLAGS      = -Wall -Wextra -Werror
-CPPFLAGS    = -Iinc -Ilibft -Ift_printf
-RM          = rm -f
+NAME 		= push_swap
+CC 		= cc
+CFLAGS		= -Wall -Wextra -Werror
+CPPFLAGS 	= -Iinc -Ilibft -Ift_printf
+RM 		= rm -f
 
-OBJ_DIR     = obj
-SRC_DIR     = src
-LIBFT_DIR   = ./libft
-PRINTF_DIR  = ./ft_printf
-LIBFT       = $(LIBFT_DIR)/libft.a
-PRINTF      = $(PRINTF_DIR)/libftprintf.a
+OBJ_DIR 	= obj
+SRC_DIR 	= src
+LIBFT_DIR 	= ./libft
+PRINTF_DIR 	= ./ft_printf
+LIBFT 		= $(LIBFT_DIR)/libft.a
+PRINTF 		= $(PRINTF_DIR)/libftprintf.a
 
-LDFLAGS     = -L$(LIBFT_DIR) -L$(PRINTF_DIR)
-LDLIBS      = -lft -lftprintf
+LDFLAGS 	= -L$(LIBFT_DIR) -L$(PRINTF_DIR)
+LDLIBS		= -lft -lftprintf
 
-SRC         = $(shell find $(SRC_DIR) -type f -name "*.c")
-OBJ         = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
+SRC 		= $(shell find $(SRC_DIR) -type f -name "*.c")
+OBJ 		= $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
 all: $(LIBFT) $(PRINTF) $(NAME)
 

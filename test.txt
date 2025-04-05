@@ -1,0 +1,63 @@
+- Tests válidos 
+
+./push_swap 2147483647 2 4 7
+./push_swap 99 -2147483648 23 545
+./push_swap "2147483647 843 56544 24394"
+./push_swap "3 2 1"
+./push_swap "  3     2   1    "
+./push_swap "3" 2 "1"
+./push_swap +1 -1 2
+./push_swap 2147483647
+./push_swap -2147483648
+./push_swap "2147483647 -2147483648"
+
+
+- Tests inválidos (Error)
+- Letras o palabras
+
+./push_swap 1 3 dog 35 80 -3
+./push_swap a
+./push_swap 1 2 3 5 67b778 947
+./push_swap " 12 4 6 8 54fhd 4354"
+./push_swap 1 -- 45 32
+./push_swap "1 2 4 3" 76 90 "348 05"
+./push_swap 1 - 1
+./push_swap 1 --1
+./push_swap 1 ++1
+./push_swap "1 2 3a"
+./push_swap 2b
+./push_swap 4 "5 6dog"
+./push_swap "1\t2\t3"
+./push_swap "1\n2\n3"
+./push_swap +
+./push_swap -
+./push_swap "1 2 + -"
+./push_swap "1 2 💥 3"
+./push_swap "#$%^&*()"
+
+
+- Duplicados camuflados
+
+./push_swap 1 3 58 9 3
+./push_swap 3 03
+./push_swap " 49 128 50 38 49"
+./push_swap 1 01 001
+
+- Fuera de rango int
+
+./push_swap 54867543867438 3
+./push_swap -2147483647765 4 5
+./push_swap "214748364748385 28 47 29"
+./push_swap 2147483648
+./push_swap 999999999999999999999999
+./push_swap "2147483647 2147483648"
+
+- Entrada vacía o en blanco
+
+./push_swap ""
+./push_swap "           "
+
+
+- Errores por múltiples strings no divididas bien
+
+./push_swap "3 2" "1"
