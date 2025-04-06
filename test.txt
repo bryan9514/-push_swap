@@ -58,6 +58,8 @@
 ./push_swap "           "
 
 
-- Errores por múltiples strings no divididas bien
+- Errores por múltiples strings no divididas
 
 ./push_swap "3 2" "1"
+
+

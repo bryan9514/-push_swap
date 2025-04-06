@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brturcio <brturcio@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 20:41:17 by brturcio          #+#    #+#             */
-/*   Updated: 2025/04/03 14:22:58 by brturcio         ###   ########.fr       */
+/*   Updated: 2025/04/06 11:30:35 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,6 @@ void	sort_three(t_stack **a_stack)
 	else if ((*a_stack)->value < (*a_stack)->next->value
 		&& (*a_stack)->next->value > (*a_stack)->next->next->value)
 		ft_rra(a_stack);
-}
-
-void	sort_four(t_stack **a_stack, t_stack **b_stack)
-{
-	while (size_stack(*a_stack) > 3)
-	{
-		min_on_top(a_stack);
-		ft_pb(a_stack, b_stack);
-	}
-	sort_three(a_stack);
-	ft_pa(a_stack, b_stack);
 }
 
 void	sort_five(t_stack **a_stack, t_stack **b_stack)

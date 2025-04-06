@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brturcio <brturcio@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 21:45:06 by brturcio          #+#    #+#             */
-/*   Updated: 2025/04/03 14:17:18 by brturcio         ###   ########.fr       */
+/*   Updated: 2025/04/06 11:30:48 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ void	free_stack_error(t_stack **stack)
 		free(*stack);
 		*stack = tmp;
 	}
-	write(1, "Error\n", 6);
+	write(2, "Error\n", 6);
 }

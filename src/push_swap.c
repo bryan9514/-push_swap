@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brturcio <brturcio@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 12:53:22 by brturcio          #+#    #+#             */
-/*   Updated: 2025/04/03 14:14:04 by brturcio         ###   ########.fr       */
+/*   Updated: 2025/04/06 11:30:42 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	validate_and_parse_args(int ac, char **av, t_stack **a_stack)
 	args = get_args(ac, av);
 	if (!args || !validate_args(args))
 	{
-		write (1, "Error\n", 6);
+		write (2, "Error\n", 6);
 		if (ac == 2)
 			free_args(args);
 		exit (1);

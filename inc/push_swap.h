@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brturcio <brturcio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brturcio <brturcio@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 14:21:39 by brturcio          #+#    #+#             */
-/*   Updated: 2025/04/03 14:42:39 by brturcio         ###   ########.fr       */
+/*   Updated: 2025/04/06 11:30:28 by brturcio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void	free_stack_error(t_stack **stack);
 
 void	sort_two(t_stack **a_stack);
 void	sort_three(t_stack **a_stack);
-void	sort_four(t_stack **a_stack, t_stack **b_stack);
 void	sort_five(t_stack **a_stack, t_stack **b_stack);
 
 t_stack	*find_min(t_stack *stack);
